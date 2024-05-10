@@ -1,42 +1,70 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.socialmedia-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.socialmedia-icons {
+  display: flex;
+  
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-media-icon {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px; /* Espacio entre los iconos */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.red-title {
+  font-size: 3.5vw; /* Tamaño del título en relación con el ancho del viewport */
+  margin-bottom: 10px; /* Espacio inferior para separar los iconos */
+  font-family: fantasy;
+  color: white;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .red-title {
+    font-size: 3.5vw; /* Reducir el tamaño de la fuente para pantallas medianas */
   }
 }
 
-.card {
-  padding: 2em;
+@media (max-width: 767px) {
+  .red-title {
+    font-size: 20px; /* Tamaño de fuente fijo para pantallas pequeñas */
+  }
 }
 
-.read-the-docs {
-  color: #888;
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mantiene la relación de aspecto original sin cambiar la forma */
+  background-color: black; /* Color de fondo negro si el video no llena todo el contenedor */
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video {
+    width: 100%;
+    height: auto;
+  }
 }
