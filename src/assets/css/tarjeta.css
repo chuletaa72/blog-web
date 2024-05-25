@@ -10,3 +10,16 @@
         padding: 20px;
         background-color: #fff;
       }
+
+      .tarjeta-nombre {
+        font-size: 1.5em;
+        margin: 10px 0;
+      }
+      
+      .tarjeta-titulo,
+      .tarjeta-titulo,
+      .tarjeta-correo
+       {
+        margin: 5px 0;
+        color: #555;
+      }
