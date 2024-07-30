@@ -1,26 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
 .presentation-card {
-        width: 460px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        text-align: center;
-        font-family: Arial, sans-serif;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: #fff;
-        opacity: 70%;
-      }
+  height: auto;
+  width: 80%;
+  max-width: 460px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  opacity: 70%;
+  transition: width 0.3s;
+}
 
-      .tarjeta-nombre {
-        font-size: 1.5em;
-        margin: 10px 0;
-      }
-      
-      .tarjeta-titulo,
-      .tarjeta-titulo,
-      .tarjeta-correo
-       {
-        margin: 5px 0;
-        color: #555;
-      }
+.tarjeta-nombre {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.tarjeta-titulo,
+.tarjeta-correo {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 600px) {
+  .presentation-card {
+      width: 90%;
+      padding: 15px;
+  }
+  .tarjeta-nombre {
+      font-size: 1.2em;
+  }
+  .tarjeta-titulo,
+  .tarjeta-correo {
+      font-size: 0.9em;
+  }
+}
+
+/* Estilos para dispositivos tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .presentation-card {
+      width: 70%;
+      padding: 20px;
+  }
+  .tarjeta-nombre {
+      font-size: 1.3em;
+  }
+  .tarjeta-titulo,
+  .tarjeta-correo {
+      font-size: 1em;
+  }
+}
+
+/* Estilos para dispositivos de escritorio */
+@media (min-width: 1025px) {
+  .presentation-card {
+      width: 50%;
+      max-width: 460px;
+      padding: 20px;
+  }
+  .tarjeta-nombre {
+      font-size: 1.5em;
+  }
+  .tarjeta-titulo,
+  .tarjeta-correo {
+      font-size: 1em;
+  }
+}

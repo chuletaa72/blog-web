@@ -1,1 +1,61 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Estilos para el contenedor principal */
+header, main, footer {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 600px) {
+    header, main, footer {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    p {
+        font-size: 1em;
+    }
+}
+
+/* Estilos para dispositivos tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header, main, footer {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1.2em;
+    }
+}
+
+/* Estilos para dispositivos de escritorio */
+@media (min-width: 1025px) {
+    header, main, footer {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1.5em;
+    }
+}
